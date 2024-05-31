@@ -1,0 +1,995 @@
+/* POPPINS FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-red: #9e221f;
+  --secondary-red: #cf1519;
+  --primary-yellow: #ffa500;
+  --secondary-yellow: #e59c25;
+  --orange: #fb893a;
+  --white: #fff;
+  --black: #2a2a2a;
+  --light-grey: #f5f7fa;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+h4 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+h5 {
+  font-size: 17px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  color: #797e93;
+}
+
+@media (max-width: 991px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px !important;
+  }
+}
+
+.m-btn {
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--white);
+  transition: 0.5s ease;
+}
+.m-btn.btn-red {
+  background-color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+}
+.m-btn.btn-red:hover {
+  color: var(--secondary-red);
+  border-color: var(--secondary-red);
+  background-color: transparent;
+}
+.m-btn.btn-yellow {
+  background-color: var(--primary-yellow);
+  border: 1px solid var(--primary-yellow);
+}
+.m-btn.yellow-dark {
+  border-color: var(--secondary-yellow);
+  background-color: var(--secondary-yellow);
+}
+.m-btn.btn-yellow:hover {
+  color: var(--primary-yellow);
+  background-color: transparent;
+}
+.text-red {
+  color: var(--secondary-red);
+}
+
+.text-dark-red {
+  color: var(--primary-red);
+}
+
+.section-label {
+  padding: 6px 20px;
+  border-radius: 40px;
+  color: #fb893a;
+  background-color: #fb8a3a5b;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.bg-yellow {
+  background-color: var(--primary-yellow);
+  border: 1px solid var(--primary-yellow) !important;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* 
+===============================================
+    NAVBAR SECTION START
+===============================================
+*/
+.top-nav {
+  background-color: var(--black);
+}
+.top-nav a,
+.top-nav ul li a {
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 500;
+  margin: 0 10px;
+  transition: 0.5s ease;
+}
+.top-nav ul li a:hover {
+  color: var(--primary-yellow);
+}
+
+/* MOBILE NAV */
+.mobile-nav {
+  width: 300px;
+  padding: 20px 0;
+  padding-top: 100px;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  height: 100vh;
+  overflow: auto;
+  background-color: var(--black);
+  box-shadow: 0 0 30px -25px grey;
+  transition: 0.5s ease;
+}
+.mobile-nav.active {
+  right: 0;
+}
+
+.mobile-nav .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--primary-yellow);
+  transition: 0.5s ease;
+}
+.mobile-nav .close-btn:hover {
+  color: var(--white);
+  background-color: var(--primary-yellow);
+}
+.mobile-nav ul li a {
+  display: block;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* MOBILE NAV END */
+
+/* 
+===============================================
+    NAVBAR SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+    HERO SECTION START
+===============================================
+*/
+.hero-section {
+  padding: 100px 10px;
+  background-color: var(--black);
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 50px 10px;
+    padding-bottom: 100px;
+  }
+}
+.hero-section .hero-text h1 {
+  font-size: 36px;
+  color: var(--white);
+  margin: 20px 0;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.hero-section .hero-text .stars {
+  margin-top: 40px;
+}
+.hero-section .hero-text .stars span i {
+  color: var(--primary-yellow);
+}
+.hero-section .hero-text .icon-boxes {
+  margin: 40px 0;
+}
+.hero-section .hero-text .icon-boxes .icon-box .icon {
+  min-width: 35px;
+  max-width: 35px;
+  min-height: 35px;
+  max-height: 35px;
+  color: var(--secondary-red);
+  background-color: var(--white);
+  border-radius: 50%;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.hero-section .hero-text .icon-boxes .icon-box p {
+  color: var(--white);
+}
+
+.hero-section .hero-images {
+  width: fit-content;
+  margin-left: auto;
+}
+.hero-section .hero-images img {
+  width: 100%;
+  border-radius: 5px;
+}
+.hero-section .hero-images .img-1 {
+  max-width: 250px;
+}
+.hero-section .hero-images .img-2 {
+  max-width: 150px;
+}
+.hero-section .hero-images .img-3 {
+  max-width: 220px;
+}
+
+/* 
+===============================================
+    HERO SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+    STARTED SECTION START
+===============================================
+*/
+.started-section {
+  transform: translateY(-80px);
+}
+.started-section .started-wrapper {
+  background: linear-gradient(
+    to right,
+    var(--primary-red),
+    var(--secondary-red)
+  );
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+
+.started-section .started-wrapper .started-text h3 {
+  color: var(--white);
+  margin-bottom: 15px;
+}
+.started-section .started-wrapper .started-text label {
+  font-size: 14px;
+  color: var(--white);
+}
+.started-section .started-wrapper .started-text select,
+.started-section .started-wrapper .started-text input {
+  border-radius: 5px;
+  height: 45px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.started-section .started-wrapper .started-text button {
+  height: 45px;
+}
+
+/* 
+===============================================
+    STARTED SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+    COLLABRATION SECTION START
+===============================================
+*/
+.collabration {
+  margin: 80px 0;
+  margin-top: 0;
+}
+
+.collabration .img-boxes {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.collabration .img-boxes .img-box {
+  width: 180px;
+  height: 60px;
+  border-radius: 100px;
+  box-shadow: 0 0 15px -8px grey;
+  padding: 5px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.collabration .img-boxes .img-box img {
+  width: 150px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* 
+===============================================
+    COLLABRATION SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+    SERVICES SECTION START
+===============================================
+*/
+.services-section {
+  background-color: var(--light-grey);
+  padding: 60px 10px;
+}
+
+.services-section .service-card {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.services-section .service-card .card-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.services-section .service-card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-section .service-card .card-text h2 {
+  margin-bottom: 14px;
+}
+.services-section .service-card .card-text a {
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.5s ease;
+}
+.services-section .service-card .card-text a i {
+  font-size: 16px;
+  display: inline-block;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.services-section .service-card .card-text a:hover {
+  color: var(--primary-yellow);
+}
+
+/* 
+===============================================
+    SERVICES SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+     COURSE TAKERS SECTIONS START
+===============================================
+*/
+.course-taker {
+  margin: 50px 0;
+}
+
+.course-taker .ct-img img {
+  width: 100%;
+}
+
+.course-taker .ct-text h2 {
+  margin-bottom: 20px;
+}
+.course-taker .ct-text p {
+  margin: 15px 0;
+}
+.course-taker .ct-text p a {
+  color: var(--black);
+}
+/* 
+===============================================
+     COURSE TAKERS SECTIONS END
+===============================================
+*/
+
+/* 
+===============================================
+     INSTALLMENT PLAN SECTION START
+===============================================
+*/
+.installment {
+  margin: 50px 0;
+}
+.installment .inst-plan {
+  border-radius: 10px;
+  background-color: var(--light-grey);
+  padding: 10px 30px;
+  padding-bottom: 0;
+}
+.installment .inst-plan .inst-img {
+  max-width: 350px;
+}
+.installment .inst-plan .inst-text h2 {
+  margin-bottom: 20px;
+}
+.installment .inst-plan .inst-text p {
+  margin: 20px 0;
+}
+
+/* 
+===============================================
+     INSTALLMENT PLAN SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+     SUBJECT SECTION START
+===============================================
+*/
+.subject-sec {
+  margin: 70px 0;
+}
+.subject-sec .subject-text .subjects {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.subject-sec .subject-text .subjects .subject {
+  background-color: var(--light-grey);
+  padding: 5px 20px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0 !important;
+}
+.subject-sec .subject-text .subjects .subject p {
+  margin: 0;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.subject-sec .subject-text .subjects .subject p i {
+  margin-left: 10px;
+}
+
+.subject-sec .subject-card {
+  background-color: var(--black);
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+.subject-sec .subject-card .feature {
+  margin: 15px 0;
+}
+
+.subject-sec .subject-card p {
+  color: var(--secondary-yellow);
+  margin: 0;
+  font-weight: 500;
+}
+
+.subject-sec .subject-card i {
+  color: var(--white);
+  font-size: 22px;
+}
+/* 
+===============================================
+     SUBJECT SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+     PROCESS SECTION START
+===============================================
+*/
+.process-section {
+  margin-top: 50px;
+}
+.process-section .card-body {
+  position: relative;
+  isolation: isolate;
+  transition: 0.5s ease;
+}
+.process-section .card-body:hover {
+  background-color: var(--black);
+}
+.process-section .card-body .count {
+  font-size: 80px;
+  color: var(--light-grey);
+  font-weight: 600;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  z-index: -1;
+  line-height: 1;
+}
+.process-section .card-body:hover p,
+.process-section .card-body:hover h6,
+.process-section .card-body:hover .icon i {
+  color: #fff;
+}
+
+.process-section .card-body .icon {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.process-section .card-body .icon i {
+  font-size: 35px;
+  color: var(--black);
+  transition: 0.5s ease;
+}
+
+.process-section .card-body h6 {
+  font-size: 15px;
+  color: var(--black);
+  transition: 0.5s ease;
+}
+.process-section .card-body p {
+  font-size: 14px;
+  margin-bottom: 0;
+  transition: 0.5s ease;
+}
+
+@media (max-width: 757px) {
+  .counter .count h3 {
+    font-size: 30px !important;
+  }
+  .counter .count p {
+    font-size: 14px;
+  }
+}
+
+/* 
+===============================================
+     PROCESS SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+     GUARANTEE SECTION START
+===============================================
+*/
+.guarantee {
+  padding: 50px 10px;
+  background-color: var(--black);
+}
+
+.guarantee .guat-card {
+  border: 1px solid #797e93;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.guarantee .guat-card h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.guarantee .guat-card .m-btn {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.guarantee .guat-card img:not(.full-img) {
+  width: 55px;
+  height: 55px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.guarantee .guat-card.full-img-box {
+  padding: 0;
+  border-radius: 0;
+  background-color: var(--light-grey);
+}
+.guarantee .guat-card.full-img-box .full-img {
+  width: 100%;
+  height: 218px;
+  object-fit: cover;
+}
+.guarantee .guat-card p {
+  font-size: 13px;
+  color: var(--white);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.guarantee .guat-card.bg-yellow p,
+.guarantee .guat-card.bg-yellow h5 {
+  color: var(--black);
+}
+
+/*  COUNTER SECTION START  */
+
+.counter {
+  margin-top: 50px;
+}
+
+.counter .count {
+  border-right: 1px solid darkgray;
+}
+.counter .count h3 {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.counter .count p {
+  color: var(--white);
+}
+/*  COUNTER SECTION end */
+
+/* 
+===============================================
+     GUARANTEE SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+     REVIEWS SECTIONS START
+===============================================
+*/
+.review-section {
+  margin: 100px 0;
+}
+
+@media (max-width: 767px) {
+  .review-section {
+    margin: 50px 0;
+  }
+}
+
+.review-section .section-label {
+  color: var(--primary-red);
+  background-color: #e4e9fd;
+}
+
+.review-section .reviews-slides .owl-stage-outer {
+  overflow: visible;
+}
+.review-section .reviews-slides .review {
+  padding: 20px;
+  box-shadow: 0 0 30px -15px grey;
+  position: relative;
+}
+.review-section .reviews-slides .review .qoute {
+  width: 50px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.review-section .reviews-slides .review .user .user-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.review-section .reviews-slides .review .user .user-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-section .reviews-slides .review .user .user-name h4 {
+  color: var(--black);
+  font-weight: 500;
+}
+.stars span i {
+  color: var(--primary-yellow);
+  font-size: 14px;
+}
+.review-section .reviews-slides .review p {
+  margin-top: 30px;
+}
+/* 
+===============================================
+     REVIEWS SECTIONS END
+===============================================
+*/
+
+/* 
+===============================================
+     FAQ SECTION START
+===============================================
+*/
+#faq-container .faq-wrap {
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--black);
+  transform: all 0.4s ease-in-out;
+}
+
+.arrow-icon i {
+  transform: rotate(-180deg);
+  font-size: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+.collapsed .arrow-icon i {
+  transform: rotate(0deg);
+}
+
+#faq-container .faq-wrap h4 {
+  color: var(--primary-red) !important;
+  font-size: 16px;
+  font-weight: 600;
+}
+#faq-container .faq-wrap .collapsed h4 {
+  color: var(--black) !important;
+  font-size: 16px;
+  font-weight: 600;
+}
+#faq-container .faq-wrap .faq-text {
+  padding: 15px;
+}
+#faq-container .faq-wrap p {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* 
+===============================================
+     FAQ SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+     PORTAL SECTION START
+===============================================
+*/
+.portal-section {
+  margin: 80px 0;
+}
+
+@media (max-width: 767px) {
+  .portal-section {
+    margin: 40px 0;
+  }
+}
+
+.portal-section .portals .portal {
+  width: 150px;
+}
+.portal-section .portals .portal img {
+  width: 120px;
+  object-fit: contain;
+}
+/* 
+===============================================
+     PORTAL SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+     CONTACT SECTION START
+===============================================
+*/
+.contact-section {
+  padding: 50px 10px;
+  background-color: var(--primary-red);
+}
+.contact-section h2 {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.contact-section i {
+  font-size: 30px;
+  color: var(--primary-yellow);
+  font-size: 28px;
+}
+.contact-section p {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.contact-section h5 {
+  font-weight: 500;
+}
+
+/* 
+===============================================
+     CONTACT SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+     FOOTER SECTION START
+===============================================
+*/
+.footer {
+  background-color: var(--black);
+  padding: 40px 10px;
+}
+.classes-section {
+  border-bottom: 1px solid #494949;
+}
+.classes-section h4 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.classes-section ul {
+  padding-left: 0;
+  list-style: none;
+}
+.classes-section ul li {
+  margin: 10px 0;
+}
+.classes-section ul li a {
+  font-size: 14px;
+  color: gray;
+  transition: 0.5s ease;
+}
+.classes-section ul li a:hover {
+  color: var(--orange);
+}
+
+/* main-ft */
+.main-ft {
+  margin-top: 50px;
+}
+.main-ft .ft-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+.main-ft p {
+  color: var(--white);
+  font-size: 14px;
+}
+.main-ft h4 {
+  font-weight: 500;
+  color: var(--primary-yellow);
+  margin-bottom: 10px;
+}
+.main-ft ul li {
+  margin: 3px 0;
+}
+.main-ft ul li a {
+  font-size: 16px;
+  color: var(--white);
+  transition: 0.5s ease;
+}
+.main-ft ul li a:hover {
+  color: var(--primary-yellow);
+}
+.main-ft ul.social-icon li a i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grey);
+  color: var(--black);
+  border-radius: 50%;
+  margin: 7px;
+  margin-left: 0;
+  transition: 0.5s ease;
+}
+.main-ft ul.social-icon li a i:hover {
+  color: var(--white);
+  background-color: var(--primary-yellow);
+}
+
+.ft-bottom {
+  padding: 0 10px;
+}
+.ft-bottom .line {
+  color: grey;
+}
+.ft-bottom p {
+  color: gray;
+  font-size: 14px;
+}
+.ft-bottom p strong {
+  font-weight: 600;
+}
+.ft-bottom ul li {
+  list-style: none;
+  border-right: 1px solid grey;
+}
+.ft-bottom ul li:last-child {
+  border: none;
+}
+.ft-bottom ul li a {
+  font-size: 14px;
+  color: grey;
+  padding: 0 5px;
+}
+.ft-bottom ul li a:hover {
+  text-decoration: underline;
+}
+/* 
+===============================================
+     FOOTER SECTION END
+===============================================
+*/
